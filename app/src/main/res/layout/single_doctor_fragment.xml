@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <!-- First Name Label -->
+    <TextView
+        android:id="@+id/first_name_label"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dip"
+        android:paddingTop="10dip"
+        android:textColor="#000000"
+        android:textSize="25dip"
+        android:textStyle="bold" />
+
+    <!-- Last Name Label -->
+    <TextView
+        android:id="@+id/last_name_label"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000000" />
+
+    <!-- Work location Label -->
+    <TextView
+        android:id="@+id/work_location_label"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="#000000" />
+
+    <!-- Phone Number Label -->
+    <TextView
+        android:id="@+id/phone_number_label"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="#000000" />
+
+    <!-- Email Label -->
+    <TextView
+        android:id="@+id/email_label"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="#000000" />
+
+</LinearLayout>

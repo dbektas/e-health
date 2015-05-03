@@ -1,6 +1,7 @@
 package com.smartcomet.e_health;
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
@@ -17,10 +18,33 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerC
     private NavigationDrawerFragment mNavigationDrawerFragment;
     private Toolbar mToolbar;
 
+    private static final String TAG_DOCTORS = "doctors";
+    private static final String TAG_FIRST_NAME = "first_name";
+    private static final String TAG_LAST_NAME = "last_name";
+    private static final String TAG_WORK_LOCATION = "work_location";
+    private static final String TAG_PHONE_NUMBER = "phone_number";
+    private static final String TAG_EMAIL = "email";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Intent intent = getIntent();
+        String first_name = intent.getStringExtra(TAG_FIRST_NAME);
+        String last_name = intent.getStringExtra(TAG_LAST_NAME);
+        String work_location = intent.getStringExtra(TAG_WORK_LOCATION);
+        String phone_number = intent.getStringExtra(TAG_PHONE_NUMBER);
+        String email= intent.getStringExtra(TAG_EMAIL);
+
+        Bundle bundle = new Bundle();
+        bundle.putString(TAG_FIRST_NAME, first_name);
+        bundle.putString(TAG_LAST_NAME, last_name);
+        bundle.putString(TAG_WORK_LOCATION, work_location);
+        bundle.putString(TAG_PHONE_NUMBER, phone_number);
+        bundle.putString(TAG_EMAIL, email);
+        SingleDoctorFragment fragobj=new SingleDoctorFragment();
+        fragobj.setArguments(bundle);
+
         mToolbar = (Toolbar) findViewById(R.id.toolbar_actionbar);
         setSupportActionBar(mToolbar);
 
