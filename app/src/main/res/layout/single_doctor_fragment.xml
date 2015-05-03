@@ -10,11 +10,8 @@
         android:id="@+id/first_name_label"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="10dip"
         android:paddingTop="10dip"
-        android:textColor="#000000"
-        android:textSize="25dip"
-        android:textStyle="bold" />
+        android:textColor="#000000"/>
 
     <!-- Last Name Label -->
     <TextView
@@ -28,7 +25,6 @@
         android:id="@+id/work_location_label"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textStyle="bold"
         android:textColor="#000000" />
 
     <!-- Phone Number Label -->
@@ -36,7 +32,6 @@
         android:id="@+id/phone_number_label"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textStyle="bold"
         android:textColor="#000000" />
 
     <!-- Email Label -->
@@ -44,7 +39,6 @@
         android:id="@+id/email_label"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textStyle="bold"
         android:textColor="#000000" />
 
 </LinearLayout>

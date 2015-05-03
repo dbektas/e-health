@@ -61,12 +61,12 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerC
     public void onNavigationDrawerItemSelected(int position) {
         Fragment fragment;
         switch (position) {
-            case 0: //people
-                fragment = getFragmentManager().findFragmentByTag(PeopleFragment.TAG);
+            case 0: //doctors
+                fragment = getFragmentManager().findFragmentByTag(DoctorsFragment.TAG);
                 if (fragment == null) {
-                    fragment = new PeopleFragment();
+                    fragment = new DoctorsFragment();
                 }
-                getFragmentManager().beginTransaction().replace(R.id.container, fragment, PeopleFragment.TAG).commit();
+                getFragmentManager().beginTransaction().replace(R.id.container, fragment, DoctorsFragment.TAG).commit();
                 break;
             case 1: //favorites
                 fragment = getFragmentManager().findFragmentByTag(FavoritesFragment.TAG);

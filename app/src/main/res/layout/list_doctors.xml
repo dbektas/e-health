@@ -8,25 +8,19 @@
     android:paddingRight="10dp">
 
     <!-- First Name Label -->
-
     <TextView
         android:id="@+id/first_namelbl"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:autoText="false"
-        android:paddingBottom="2dip"
-        android:paddingTop="6dip"
-        android:textColor="#43bd00"
-        android:textSize="16sp"
-        android:textStyle="bold" />
+        android:paddingTop="5dip"
+        android:textColor="@color/myTextSecondaryColor" />
 
     <!-- Last Name label -->
     <TextView
         android:id="@+id/last_namelbl"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="2dip"
-        android:textColor="#acacac" />
+        android:textColor="@color/myTextSecondaryColor"/>
 
     <!-- Work Location label -->
     <TextView
@@ -34,9 +28,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Work location: "
-        android:gravity="left"
-        android:textColor="#5d5d5d"
-        android:textStyle="bold" />
+        android:textColor="@color/myTextSecondaryColor"/>
 
     <!-- Phone number label -->
     <TextView
@@ -45,8 +37,7 @@
         android:layout_height="wrap_content"
         android:gravity="left"
         android:text="Phone number: "
-        android:textColor="#5d5d5d"
-        android:textStyle="bold" />
+        android:textColor="@color/myTextSecondaryColor"/>
 
     <!-- Email label -->
     <TextView
@@ -55,7 +46,6 @@
         android:layout_height="wrap_content"
         android:gravity="left"
         android:text="E-mail: "
-        android:textColor="#5d5d5d"
-        android:textStyle="bold" />
+        android:textColor="@color/myTextSecondaryColor"/>
 
 </LinearLayout>

@@ -25,9 +25,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class PeopleFragment extends ListFragment {
+public class DoctorsFragment extends ListFragment {
 
-    public static final String TAG = "people";
+    public static final String TAG = "doctors";
     private ProgressDialog progressDialog;
 
     private static String url = "http://10.0.2.2:8080/findDoctors";
@@ -46,7 +46,7 @@ public class PeopleFragment extends ListFragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.people_fragment, container, false);
+        return inflater.inflate(R.layout.doctors_fragment, container, false);
     }
 
     @Override
@@ -74,20 +74,6 @@ public class PeopleFragment extends ListFragment {
                         .getText().toString();
                 String email = ((TextView) view.findViewById(R.id.emaillbl))
                         .getText().toString();
-
-                /*mFragment = getFragmentManager().findFragmentByTag(SingleDoctorFragment.TAG);
-                if (mFragment == null) {
-                    Bundle args = new Bundle();
-                    args.putString(TAG_FIRST_NAME, first_name);
-                    args.putString(TAG_LAST_NAME, last_name);
-                    args.putString(TAG_WORK_LOCATION, work_location);
-                    args.putString(TAG_PHONE_NUMBER, phone_number);
-                    args.putString(TAG_EMAIL, email);
-
-                    SingleDoctorFragment singleDoctorFragment = new SingleDoctorFragment();
-                    singleDoctorFragment.setArguments(args);
-                }
-                getFragmentManager().beginTransaction().add(R.id.container, mFragment, SingleDoctorFragment.TAG).commit();*/
 
                 Intent intent = new Intent(getActivity().getBaseContext(),
                         MainActivity.class);
@@ -144,12 +130,6 @@ public class PeopleFragment extends ListFragment {
                         String work_location = c.getString(TAG_WORK_LOCATION);
                         String phone_number = c.getString(TAG_PHONE_NUMBER);
                         String email = c.getString(TAG_EMAIL);
-
-                        // Phone node is JSON Object
-                       /* JSONObject phone = c.getJSONObject(TAG_PHONE);
-                        String mobile = phone.getString(TAG_PHONE_MOBILE);
-                        String home = phone.getString(TAG_PHONE_HOME);
-                        String office = phone.getString(TAG_PHONE_OFFICE);*/
 
                         // tmp hashmap for single contact
                         HashMap<String, String> doctor = new HashMap<>();

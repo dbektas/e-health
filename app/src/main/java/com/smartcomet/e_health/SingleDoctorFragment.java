@@ -28,7 +28,9 @@ public class SingleDoctorFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        return inflater.inflate(R.layout.single_doctor_fragment, container, false);
+        View V = inflater.inflate(R.layout.single_doctor_fragment, container, false);
+
+        return V;
     }
 
     @Override
@@ -47,11 +49,11 @@ public class SingleDoctorFragment extends Fragment {
             String email = getArguments().getString(TAG_EMAIL);
 
             // Displaying all values on the screen
-            TextView lblfirstname = (TextView) getView().findViewById(R.id.first_namelbl);
-            TextView lbllastname = (TextView) getView().findViewById(R.id.last_namelbl);
-            TextView lblworklocation = (TextView) getView().findViewById(R.id.work_locationlbl);
-            TextView lblphonenumber = (TextView) getView().findViewById(R.id.phone_numberlbl);
-            TextView lblemail = (TextView) getView().findViewById(R.id.emaillbl);
+            TextView lblfirstname = (TextView) getView().findViewById(R.id.first_name_label);
+            TextView lbllastname = (TextView) getView().findViewById(R.id.last_name_label);
+            TextView lblworklocation = (TextView) getView().findViewById(R.id.work_location_label);
+            TextView lblphonenumber = (TextView) getView().findViewById(R.id.phone_number_label);
+            TextView lblemail = (TextView) getView().findViewById(R.id.email_label);
 
             lblfirstname.setText(first_name);
             lbllastname.setText(last_name);
