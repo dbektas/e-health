@@ -24,6 +24,7 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerC
     private static final String TAG_WORK_LOCATION = "work_location";
     private static final String TAG_PHONE_NUMBER = "phone_number";
     private static final String TAG_EMAIL = "email";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,26 +62,37 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerC
     public void onNavigationDrawerItemSelected(int position) {
         Fragment fragment;
         switch (position) {
-            case 0: //doctors
+
+            case 0: //newsfeed
+                fragment = getFragmentManager().findFragmentByTag(NewsFeedFragment.TAG);
+                if (fragment == null) {
+                    fragment = new NewsFeedFragment();
+                }
+                getFragmentManager().beginTransaction().replace(R.id.container, fragment, NewsFeedFragment.TAG).commit();
+                break;
+
+            case 1: //profile
+                fragment = getFragmentManager().findFragmentByTag(ProfileFragment.TAG);
+                if (fragment == null) {
+                    fragment = new ProfileFragment();
+                }
+                getFragmentManager().beginTransaction().replace(R.id.container, fragment, ProfileFragment.TAG).commit();
+                break;
+
+            case 2: //records
+                fragment = getFragmentManager().findFragmentByTag(RecordsFragment.TAG);
+                if (fragment == null) {
+                    fragment = new RecordsFragment();
+                }
+                getFragmentManager().beginTransaction().replace(R.id.container, fragment, RecordsFragment.TAG).commit();
+                break;
+
+            case 3: //doctors
                 fragment = getFragmentManager().findFragmentByTag(DoctorsFragment.TAG);
                 if (fragment == null) {
                     fragment = new DoctorsFragment();
                 }
                 getFragmentManager().beginTransaction().replace(R.id.container, fragment, DoctorsFragment.TAG).commit();
-                break;
-            case 1: //favorites
-                fragment = getFragmentManager().findFragmentByTag(FavoritesFragment.TAG);
-                if (fragment == null) {
-                    fragment = new FavoritesFragment();
-                }
-                getFragmentManager().beginTransaction().replace(R.id.container, fragment, FavoritesFragment.TAG).commit();
-                break;
-            case 2: //chat
-                fragment = getFragmentManager().findFragmentByTag(ChatFragment.TAG);
-                if (fragment == null) {
-                    fragment = new ChatFragment();
-                }
-                getFragmentManager().beginTransaction().replace(R.id.container, fragment, ChatFragment.TAG).commit();
                 break;
         }
     }

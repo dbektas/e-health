@@ -11,13 +11,13 @@ import android.widget.ListView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ChatFragment extends Fragment {
-    public static final String TAG = "chat";
+public class RecordsFragment extends Fragment {
+    public static final String TAG = "newsfeed";
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.chat_fragment, container, false);
+        return inflater.inflate(R.layout.records_fragment, container, false);
     }
 
     @Override

@@ -3,9 +3,10 @@
     <string name="drawer_open">Menu opened</string>
     <string name="drawer_close">Menu closed</string>
     <string name="action_settings">Settings</string>
-    <string name="people">People</string>
-    <string name="favorites">Favorites</string>
-    <string name="chat">Chat</string>
+    <string name="doctors">Medical Staff</string>
+    <string name="newsfeed">News Feed</string>
+    <string name="profile">My Profile</string>
+    <string name="records">Records History</string>
     <string name="action_search">Search</string>
     <string name="search_hint">Search Doctors</string>
     <string name="action_filter">Action Filter</string>

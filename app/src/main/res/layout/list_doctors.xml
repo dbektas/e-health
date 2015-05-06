@@ -13,14 +13,14 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:paddingTop="5dip"
-        android:textColor="@color/myTextSecondaryColor" />
+        android:textColor="@color/myTextPrimaryColor" />
 
     <!-- Last Name label -->
     <TextView
         android:id="@+id/last_namelbl"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/myTextSecondaryColor"/>
+        android:textColor="@color/myTextPrimaryColor"/>
 
     <!-- Work Location label -->
     <TextView
@@ -28,7 +28,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Work location: "
-        android:textColor="@color/myTextSecondaryColor"/>
+        android:textColor="@color/myTextPrimaryColor"/>
 
     <!-- Phone number label -->
     <TextView
@@ -37,7 +37,7 @@
         android:layout_height="wrap_content"
         android:gravity="left"
         android:text="Phone number: "
-        android:textColor="@color/myTextSecondaryColor"/>
+        android:textColor="@color/myTextPrimaryColor"/>
 
     <!-- Email label -->
     <TextView
@@ -46,6 +46,6 @@
         android:layout_height="wrap_content"
         android:gravity="left"
         android:text="E-mail: "
-        android:textColor="@color/myTextSecondaryColor"/>
+        android:textColor="@color/myTextPrimaryColor"/>
 
 </LinearLayout>

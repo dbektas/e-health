@@ -11,14 +11,13 @@ import android.widget.ListView;
 import java.util.ArrayList;
 import java.util.List;
 
-
-public class FavoritesFragment extends Fragment {
-    public static final String TAG = "favorites";
+public class ProfileFragment extends Fragment {
+    public static final String TAG = "profile";
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.favorites_fragment, container, false);
+        return inflater.inflate(R.layout.profile_fragment, container, false);
     }
 
     @Override
