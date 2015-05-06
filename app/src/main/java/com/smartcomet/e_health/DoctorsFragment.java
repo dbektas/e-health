@@ -25,6 +25,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+
 public class DoctorsFragment extends ListFragment {
 
     public static final String TAG = "doctors";
