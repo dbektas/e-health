@@ -31,7 +31,8 @@ public class DoctorsFragment extends ListFragment {
     public static final String TAG = "doctors";
     private ProgressDialog progressDialog;
 
-    private static String url = "http://10.0.2.2:8080/findDoctors";
+    private static String url = "http://178.62.252.61:8080/findDoctors";
+    //private static String url = "http://10.0.2.2:8080/findDoctors";
 
     private static final String TAG_DOCTORS = "doctors";
     private static final String TAG_FIRST_NAME = "first_name";

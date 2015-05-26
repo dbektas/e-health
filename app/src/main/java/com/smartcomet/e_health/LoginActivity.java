@@ -49,7 +49,8 @@ public class LoginActivity extends Activity {
                 params.add(new BasicNameValuePair("password", passtxt));
                 ServerRequest sr = new ServerRequest();
 
-                JSONObject json = sr.getJSON("http://10.0.2.2:8080/login",params);
+                JSONObject json = sr.getJSON("http://178.62.252.61:8080/login",params);
+                //JSONObject json = sr.getJSON("http://10.0.2.2:8080/login",params);
 
                 if(json != null){
                     try{
