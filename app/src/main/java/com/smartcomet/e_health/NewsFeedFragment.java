@@ -3,35 +3,61 @@ package com.smartcomet.e_health;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
-import java.util.ArrayList;
-import java.util.List;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 public class NewsFeedFragment extends Fragment {
     public static final String TAG = "newsfeed";
 
+    WebView myWebView;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.newsfeed_fragment, container, false);
+
+        View rootView = inflater.inflate(R.layout.newsfeed_fragment, container, false);
+
+        String url = "http://www.medicaldaily.com/";
+
+        WebView webView = (WebView)rootView.findViewById(R.id.webView);
+        webView.loadUrl(url);
+        webView.setWebViewClient(new WebViewClient() {
+
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, String url) {
+                view.loadUrl(url);
+                return true;
+
+
+            }
+        });
+
+        webView.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                if (event.getAction() == KeyEvent.ACTION_DOWN) {
+                    WebView webView = (WebView) v;
+
+                    switch (keyCode) {
+                        case KeyEvent.KEYCODE_BACK:
+                            if (webView.canGoBack()) {
+                                webView.goBack();
+                                return true;
+                            }
+                            break;
+                    }
+                }
+
+                return false;
+            }
+        });
+
+        return rootView;
+
     }
 
-    @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        List<String> content = new ArrayList<>();
-        content.add("kec");
-        content.add("dvica");
-        content.add("trica");
-        content.add("cetvorka");
-        content.add("petica");
-        content.add("sestica");
-        content.add("sedmica");
-        ListView listView = (ListView) getActivity().findViewById(R.id.listView);
-        listView.setAdapter(new ArrayAdapter<>(getActivity(), android.R.layout.simple_list_item_1, content));
-    }
 }
