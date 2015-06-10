@@ -60,35 +60,6 @@ public class DoctorsFragment extends ListFragment {
 
         doctorsList = new ArrayList<>();
 
-        ListView listView = getListView();
-
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-                String first_name = ((TextView) view.findViewById(R.id.first_namelbl))
-                        .getText().toString();
-                String last_name = ((TextView) view.findViewById(R.id.last_namelbl))
-                        .getText().toString();
-                String work_location = ((TextView) view.findViewById(R.id.work_locationlbl))
-                        .getText().toString();
-                String phone_number = ((TextView) view.findViewById(R.id.phone_numberlbl))
-                        .getText().toString();
-                String email = ((TextView) view.findViewById(R.id.emaillbl))
-                        .getText().toString();
-
-                Intent intent = new Intent(getActivity().getBaseContext(),
-                        MainActivity.class);
-                intent.putExtra(TAG_FIRST_NAME, first_name);
-                intent.putExtra(TAG_LAST_NAME, last_name);
-                intent.putExtra(TAG_WORK_LOCATION, work_location);
-                intent.putExtra(TAG_PHONE_NUMBER, phone_number);
-                intent.putExtra(TAG_EMAIL, email);
-                getActivity().startActivity(intent);
-
-            }
-        });
-
         new GetDoctors(context).execute();
     }
 

@@ -43,8 +43,6 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerC
         bundle.putString(TAG_WORK_LOCATION, work_location);
         bundle.putString(TAG_PHONE_NUMBER, phone_number);
         bundle.putString(TAG_EMAIL, email);
-        SingleDoctorFragment fragobj=new SingleDoctorFragment();
-        fragobj.setArguments(bundle);
 
         mToolbar = (Toolbar) findViewById(R.id.toolbar_actionbar);
         setSupportActionBar(mToolbar);
@@ -71,32 +69,16 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerC
                 getFragmentManager().beginTransaction().replace(R.id.container, fragment, NewsFeedFragment.TAG).commit();
                 break;
 
-            case 1: //profile
-                fragment = getFragmentManager().findFragmentByTag(ProfileFragment.TAG);
-                if (fragment == null) {
-                    fragment = new ProfileFragment();
-                }
-                getFragmentManager().beginTransaction().replace(R.id.container, fragment, ProfileFragment.TAG).commit();
-                break;
-
-            case 2: //records
-                fragment = getFragmentManager().findFragmentByTag(RecordsFragment.TAG);
-                if (fragment == null) {
-                    fragment = new RecordsFragment();
-                }
-                getFragmentManager().beginTransaction().replace(R.id.container, fragment, RecordsFragment.TAG).commit();
-                break;
-
-            case 3: //doctors
+            case 1: //doctors
                 fragment = getFragmentManager().findFragmentByTag(DoctorsFragment.TAG);
                 if (fragment == null) {
                     fragment = new DoctorsFragment();
                 }
                 getFragmentManager().beginTransaction().replace(R.id.container, fragment, DoctorsFragment.TAG).commit();
                 break;
+
         }
     }
-
 
     @Override
     public void onBackPressed() {
@@ -105,7 +87,6 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerC
         else
             super.onBackPressed();
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
